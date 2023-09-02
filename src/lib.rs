@@ -149,7 +149,7 @@ mod tests {
 
     #[test]
     fn starts_with_works_with_path() {
-        let set = OperatorConstraint::new(StartsWith, PathBuf::from("/paths/"));
+        let set = OperatorConstraint::new(StartsWith, PathBuf::from("/paths"));
         assert!(!set.is_member(&PathBuf::from("nope")));
         assert!(set.is_member(&PathBuf::from("/paths/start/")));
         assert!(set.is_member(&PathBuf::from("/paths")));
